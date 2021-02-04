@@ -16,6 +16,11 @@
 		5509395525CBAD9500677C27 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395425CBAD9500677C27 /* Extension.swift */; };
 		5509395825CBAE4300677C27 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395725CBAE4300677C27 /* TabbarVC.swift */; };
 		5509395C25CBAF1200677C27 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395B25CBAF1200677C27 /* Util.swift */; };
+		5509395F25CBBD4B00677C27 /* ScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395E25CBBD4B00677C27 /* ScoreVC.swift */; };
+		5509396325CBBE3A00677C27 /* ScoreTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396225CBBE3A00677C27 /* ScoreTblCell.swift */; };
+		5509396625CBBE4800677C27 /* ScoreTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5509396525CBBE4800677C27 /* ScoreTblCell.xib */; };
+		5509396925CBC7E300677C27 /* DataArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396825CBC7E300677C27 /* DataArrays.swift */; };
+		5509396C25CBD27100677C27 /* PlayerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396B25CBD27100677C27 /* PlayerDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		5509395425CBAD9500677C27 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5509395725CBAE4300677C27 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		5509395B25CBAF1200677C27 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		5509395E25CBBD4B00677C27 /* ScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreVC.swift; sourceTree = "<group>"; };
+		5509396225CBBE3A00677C27 /* ScoreTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTblCell.swift; sourceTree = "<group>"; };
+		5509396525CBBE4800677C27 /* ScoreTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreTblCell.xib; sourceTree = "<group>"; };
+		5509396825CBC7E300677C27 /* DataArrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataArrays.swift; sourceTree = "<group>"; };
+		5509396B25CBD27100677C27 /* PlayerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,7 @@
 				5509393A25CBA88B00677C27 /* AppDelegate.swift */,
 				5509393C25CBA88B00677C27 /* SceneDelegate.swift */,
 				5509395025CBA93800677C27 /* View Controllers */,
+				5509396125CBBE0900677C27 /* Cell */,
 				5509395A25CBAE9600677C27 /* Model */,
 				5509395325CBAD2800677C27 /* Extension */,
 				5509395125CBA95300677C27 /* Views */,
@@ -79,6 +90,8 @@
 			children = (
 				5509393E25CBA88B00677C27 /* WelcomeVC.swift */,
 				5509395725CBAE4300677C27 /* TabbarVC.swift */,
+				5509395E25CBBD4B00677C27 /* ScoreVC.swift */,
+				5509396B25CBD27100677C27 /* PlayerDetailVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -103,9 +116,19 @@
 		5509395A25CBAE9600677C27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5509396825CBC7E300677C27 /* DataArrays.swift */,
 				5509395B25CBAF1200677C27 /* Util.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5509396125CBBE0900677C27 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5509396225CBBE3A00677C27 /* ScoreTblCell.swift */,
+				5509396525CBBE4800677C27 /* ScoreTblCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +191,7 @@
 				5509394725CBA88F00677C27 /* LaunchScreen.storyboard in Resources */,
 				5509394425CBA88F00677C27 /* Assets.xcassets in Resources */,
 				5509394225CBA88B00677C27 /* Main.storyboard in Resources */,
+				5509396625CBBE4800677C27 /* ScoreTblCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +204,12 @@
 			files = (
 				5509393F25CBA88B00677C27 /* WelcomeVC.swift in Sources */,
 				5509395C25CBAF1200677C27 /* Util.swift in Sources */,
+				5509395F25CBBD4B00677C27 /* ScoreVC.swift in Sources */,
+				5509396325CBBE3A00677C27 /* ScoreTblCell.swift in Sources */,
 				5509393B25CBA88B00677C27 /* AppDelegate.swift in Sources */,
 				5509393D25CBA88B00677C27 /* SceneDelegate.swift in Sources */,
+				5509396C25CBD27100677C27 /* PlayerDetailVC.swift in Sources */,
+				5509396925CBC7E300677C27 /* DataArrays.swift in Sources */,
 				5509395525CBAD9500677C27 /* Extension.swift in Sources */,
 				5509395825CBAE4300677C27 /* TabbarVC.swift in Sources */,
 			);

@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="-202.5" y="99.295774647887328"/>
         </scene>
-        <!--Item 2-->
+        <!--Play-->
         <scene sceneID="iFN-OY-XPc">
             <objects>
                 <viewController id="HlQ-Fe-DBp" sceneMemberID="viewController">
@@ -78,29 +78,78 @@
                         <viewLayoutGuide key="safeArea" id="gDj-15-Hvw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="npf-YE-Rsj"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="console" id="npf-YE-Rsj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbK-ic-Yf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-203" y="1048"/>
+            <point key="canvasLocation" x="566" y="1048"/>
         </scene>
-        <!--Item 1-->
+        <!--Score-->
         <scene sceneID="ITc-9N-tEZ">
             <objects>
-                <viewController id="3OH-YK-Hc9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoreVC" id="3OH-YK-Hc9" customClass="ScoreVC" customModule="Demo3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fb8-w9-eUX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFJ-k7-bM8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOR-ZD-vtO">
+                                        <rect key="frame" x="0.0" y="63" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score Board" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ9-aH-3uf">
+                                        <rect key="frame" x="75" y="25" width="170" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U2h-mT-8uf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3OH-YK-Hc9" id="j3X-xo-4GV"/>
+                                    <outlet property="delegate" destination="3OH-YK-Hc9" id="PdN-xC-ahL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="oGH-RD-bWU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Vo6-k7-RBy"/>
+                    <tabBarItem key="tabBarItem" title="Score" image="play" id="Vo6-k7-RBy"/>
+                    <connections>
+                        <outlet property="tblvwScore" destination="U2h-mT-8uf" id="STX-aW-976"/>
+                        <outlet property="vwHeader" destination="rFJ-k7-bM8" id="Pgw-wg-ZDc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4JE-bg-9Yw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="1048"/>
+            <point key="canvasLocation" x="-204.375" y="1047.8873239436621"/>
         </scene>
-        <!--Item-->
+        <!--Player DetailVC-->
+        <scene sceneID="W6u-qd-UlQ">
+            <objects>
+                <viewController storyboardIdentifier="PlayerDetailVC" id="AUf-YG-I3w" customClass="PlayerDetailVC" customModule="Demo3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNu-SV-bmN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ccv-qo-QXw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7b-5k-Puy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="1743"/>
+        </scene>
+        <!--Alarm-->
         <scene sceneID="Y6W-YB-nn8">
             <objects>
                 <viewController id="Cmw-gK-hQa" sceneMemberID="viewController">
@@ -110,7 +159,7 @@
                         <viewLayoutGuide key="safeArea" id="fbf-Ns-n1O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rSK-ao-0Ur"/>
+                    <tabBarItem key="tabBarItem" title="Alarm" image="clock" id="rSK-ao-0Ur"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdZ-15-ohi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,6 +186,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock" width="24" height="24"/>
+        <image name="console" width="24" height="24"/>
+        <image name="play" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
