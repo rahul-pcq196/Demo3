@@ -31,7 +31,11 @@ extension ScoreVC: UITableViewDelegate, UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreTblCell", for: indexPath) as! ScoreTblCell
         let player = arrPlayers[indexPath.row]
+        
         cell.lblIndex.text = "\(indexPath.row + 1)"
+        if let id = player["id"] as? Int{
+            cell.playerId = id
+        }
         if let name = player["name"] as? String{
             cell.lblName.text = name
         }
@@ -49,7 +53,9 @@ extension ScoreVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath) as! ScoreTblCell
         let vc = Util.getStoryboard().instantiateViewController(withIdentifier: "PlayerDetailVC") as! PlayerDetailVC
+        vc.playerId = selectedCell.playerId
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
