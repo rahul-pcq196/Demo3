@@ -23,6 +23,7 @@ class PlayerDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // fatch and set detail of player
         let filteredArray = arrPlayers.filter { $0["id"] as! Int == playerId }
         if filteredArray.count > 0{
             let player = filteredArray[0]

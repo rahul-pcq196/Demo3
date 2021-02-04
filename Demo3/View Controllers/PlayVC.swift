@@ -18,7 +18,8 @@ class PlayVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // set collectionview frame
         collvwBoard.frame = CGRect(x: 10, y: 150, width: screenWidth - 20, height: screenWidth - 20)
     }
 
@@ -46,6 +47,7 @@ extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         return CGSize(width: width, height: height)
     }
     
+    // action on selecting cell
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let selectedCell = collectionView.cellForItem(at: indexPath) as! PlayCollCell
@@ -86,7 +88,6 @@ extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                     self.collvwBoard.reloadData()
                     self.collvwBoard.isUserInteractionEnabled = true
                 }
-                
                 
             }
             

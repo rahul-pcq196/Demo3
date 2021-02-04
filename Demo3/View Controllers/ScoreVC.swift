@@ -14,7 +14,8 @@ class ScoreVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // register tableview cell from nib
         tblvwScore.register(UINib(nibName: "ScoreTblCell", bundle: .main), forCellReuseIdentifier: "ScoreTblCell")
     }
 
@@ -52,6 +53,7 @@ extension ScoreVC: UITableViewDelegate, UITableViewDataSource{
         return 100
     }
     
+    // on selecting cell of table
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as! ScoreTblCell
         let vc = Util.getStoryboard().instantiateViewController(withIdentifier: "PlayerDetailVC") as! PlayerDetailVC
