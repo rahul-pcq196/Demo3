@@ -15,7 +15,7 @@ class AlarmVC: UIViewController {
     var alertWithTF = UIAlertController()
     var timer = Timer()
     
-    var time = Int()
+    var time : Int = 0
     var mins = Int()
     var sec = Int()
     
@@ -42,7 +42,7 @@ class AlarmVC: UIViewController {
         
     }
     
-    // to update label of time
+    // to update timer label
     func updateTimeLbl(){
         
         mins = Int(time / 60)
