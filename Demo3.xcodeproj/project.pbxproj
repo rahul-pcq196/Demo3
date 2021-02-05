@@ -25,6 +25,7 @@
 		5509397225CC02A400677C27 /* PlayCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397125CC02A400677C27 /* PlayCollCell.swift */; };
 		5509397525CC068F00677C27 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397425CC068F00677C27 /* Define.swift */; };
 		5509397825CC182C00677C27 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397725CC182C00677C27 /* AlarmVC.swift */; };
+		552988C725CCFF7A0024ED73 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552988C625CCFF7A0024ED73 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		5509397125CC02A400677C27 /* PlayCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCollCell.swift; sourceTree = "<group>"; };
 		5509397425CC068F00677C27 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		5509397725CC182C00677C27 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
+		552988C625CCFF7A0024ED73 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				5509396825CBC7E300677C27 /* DataArrays.swift */,
 				5509395B25CBAF1200677C27 /* Util.swift */,
 				5509397425CC068F00677C27 /* Define.swift */,
+				552988C625CCFF7A0024ED73 /* Alert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				5509397825CC182C00677C27 /* AlarmVC.swift in Sources */,
 				5509396F25CC00BF00677C27 /* PlayVC.swift in Sources */,
 				5509397225CC02A400677C27 /* PlayCollCell.swift in Sources */,
+				552988C725CCFF7A0024ED73 /* Alert.swift in Sources */,
 				5509393F25CBA88B00677C27 /* WelcomeVC.swift in Sources */,
 				5509395C25CBAF1200677C27 /* Util.swift in Sources */,
 				5509395F25CBBD4B00677C27 /* ScoreVC.swift in Sources */,

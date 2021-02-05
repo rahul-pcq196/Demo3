@@ -19,6 +19,15 @@ class Util: NSObject {
     class func getStoryboard() -> UIStoryboard {
         return UIStoryboard(name: "Main", bundle: nil)
     }
+    
+    // to check string is null or not.
+    class func isStringNull(srcString: String) -> Bool {
+        
+        if srcString != "" && srcString !=  "null" && !(srcString == "<null>") && !(srcString == "(null)") && (srcString.count) > 0{
+            return false
+        }
+        return true
+    }
    
     // to print log in to console.
     class func printLog( _ details : Any = "", _ title : String = "") {

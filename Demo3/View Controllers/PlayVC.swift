@@ -57,26 +57,24 @@ extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             
             currentNum = indexPath.row + 1
             if (prevNum % 2 == 0) && (currentNum % 2 == 0) {
-                
-                let alert = UIAlertController(title: "Both are Even numbers", message: "", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_ action) in
+            
+                let done = UIAlertAction(title: "OK", style: .default, handler: { (_ action) in
                     self.selectedCount = 0
                     self.prevNum = 0
                     self.currentNum = 0
                     self.collvwBoard.reloadData()
-                }))
-                self.present(alert, animated: true, completion: nil)
+                })
+                Alert.shared.ShowAlert(title: "Both are Even numbers", message: "", in: self, withAction: [done], addCloseAction: false)
                 
             } else if (prevNum % 2 == 1) && (currentNum % 2 == 1) {
                 
-                let alert = UIAlertController(title: "Both are Odd numbers", message: "", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_ action) in
+                let done = UIAlertAction(title: "OK", style: .default, handler: { (_ action) in
                     self.selectedCount = 0
                     self.prevNum = 0
                     self.currentNum = 0
                     self.collvwBoard.reloadData()
-                }))
-                self.present(alert, animated: true, completion: nil)
+                })
+                Alert.shared.ShowAlert(title: "Both are Odd numbers", message: "", in: self, withAction: [done], addCloseAction: false)
                 
             } else {
                 

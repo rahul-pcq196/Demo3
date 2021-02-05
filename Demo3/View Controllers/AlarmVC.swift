@@ -11,6 +11,7 @@ class AlarmVC: UIViewController {
 
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var btnStartStop: UIButton!
+    @IBOutlet weak var btnAdd: UIButton!
     
     var isLive = false
     var timer = Timer()
@@ -24,6 +25,7 @@ class AlarmVC: UIViewController {
 
         time = 5
         updateTimeLbl()
+       
     }
     
     @objc func updateTime(){
@@ -48,18 +50,27 @@ class AlarmVC: UIViewController {
         lblTime.text = "\(String(format: "%02d", mins)) : \(String(format: "%02d", sec))"
     }
     
-    @IBAction func startStopTimer(_ sender: UIButton){
-        
-        if isLive {
-            timer.invalidate()
-            btnStartStop.setTitle("START", for: .normal)
-            isLive = false
-        } else if isLive == false && time > 0 {
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-            btnStartStop.setTitle("STOP", for: .normal)
-            isLive = true
-        }
-        
-    }
 
+    @IBAction func userHandle(_ sender: UIButton){
+        
+        if sender == btnStartStop{
+            
+            if isLive {
+                timer.invalidate()
+                btnStartStop.setTitle("START", for: .normal)
+                isLive = false
+            } else if isLive == false && time > 0 {
+                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+                btnStartStop.setTitle("STOP", for: .normal)
+                isLive = true
+            }
+            
+        } else if sender == btnAdd{
+            
+           
+        }
+
+    }
+    
 }
+
