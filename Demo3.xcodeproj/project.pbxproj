@@ -26,6 +26,8 @@
 		5509397525CC068F00677C27 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397425CC068F00677C27 /* Define.swift */; };
 		5509397825CC182C00677C27 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397725CC182C00677C27 /* AlarmVC.swift */; };
 		552988C725CCFF7A0024ED73 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552988C625CCFF7A0024ED73 /* Alert.swift */; };
+		552988CF25CD23680024ED73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 552988D125CD23680024ED73 /* Localizable.strings */; };
+		552988D525CD46280024ED73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552988D425CD46280024ED73 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		5509397425CC068F00677C27 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		5509397725CC182C00677C27 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		552988C625CCFF7A0024ED73 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		552988D025CD23680024ED73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		552988D425CD46280024ED73 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				5509395A25CBAE9600677C27 /* Model */,
 				5509395325CBAD2800677C27 /* Extension */,
 				5509395125CBA95300677C27 /* Views */,
+				552988CC25CD230C0024ED73 /* Supporting Files */,
 				5509394325CBA88F00677C27 /* Assets.xcassets */,
 				5509394825CBA88F00677C27 /* Info.plist */,
 			);
@@ -132,6 +137,7 @@
 				5509395B25CBAF1200677C27 /* Util.swift */,
 				5509397425CC068F00677C27 /* Define.swift */,
 				552988C625CCFF7A0024ED73 /* Alert.swift */,
+				552988D425CD46280024ED73 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +150,14 @@
 				5509397125CC02A400677C27 /* PlayCollCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		552988CC25CD230C0024ED73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				552988D125CD23680024ED73 /* Localizable.strings */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552988CF25CD23680024ED73 /* Localizable.strings in Resources */,
 				5509394725CBA88F00677C27 /* LaunchScreen.storyboard in Resources */,
 				5509394425CBA88F00677C27 /* Assets.xcassets in Resources */,
 				5509394225CBA88B00677C27 /* Main.storyboard in Resources */,
@@ -224,6 +239,7 @@
 				5509393F25CBA88B00677C27 /* WelcomeVC.swift in Sources */,
 				5509395C25CBAF1200677C27 /* Util.swift in Sources */,
 				5509395F25CBBD4B00677C27 /* ScoreVC.swift in Sources */,
+				552988D525CD46280024ED73 /* Constants.swift in Sources */,
 				5509396325CBBE3A00677C27 /* ScoreTblCell.swift in Sources */,
 				5509393B25CBA88B00677C27 /* AppDelegate.swift in Sources */,
 				5509393D25CBA88B00677C27 /* SceneDelegate.swift in Sources */,
@@ -252,6 +268,14 @@
 				5509394625CBA88F00677C27 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		552988D125CD23680024ED73 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				552988D025CD23680024ED73 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

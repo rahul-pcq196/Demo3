@@ -20,7 +20,7 @@ class WelcomeVC: UIViewController {
         
         if sender == btnStart{
             
-            let vc = Util.getStoryboard().instantiateViewController(withIdentifier: "TabbarVC") as! TabbarVC
+            let vc = Util.getStoryboard().instantiateViewController(withIdentifier: K.tabbarIdentifier) as! TabbarVC
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

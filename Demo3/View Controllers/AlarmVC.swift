@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AlarmVC: UIViewController {
 
@@ -32,11 +33,15 @@ class AlarmVC: UIViewController {
         
         time = time - 1
         if time <= 0{
+            
             timer.invalidate()
+            let systemSoundID: SystemSoundID = 1052
+            AudioServicesPlayAlertSound(systemSoundID)
             print("Finished")
             if time < 0{
                 return
             }
+            
         }
         updateTimeLbl()
         
@@ -53,9 +58,9 @@ class AlarmVC: UIViewController {
     // to configure alertview with text fields
     func configureAlertWithTF(){
         
-        alertWithTF = UIAlertController(title: "Enter Minutes and Seconds", message: "", preferredStyle: .alert)
+        alertWithTF = UIAlertController(title: localize(str: "enter_minutes_seconds_title"), message: "", preferredStyle: .alert)
         
-        let done = UIAlertAction(title: "Done", style: .default) { (_ action) in
+        let done = UIAlertAction(title: localize(str: "done_txt"), style: .default) { (_ action) in
             
             let txtMinutes = self.alertWithTF.textFields![0] as UITextField
             let txtSeconds = self.alertWithTF.textFields![1] as UITextField
@@ -71,15 +76,15 @@ class AlarmVC: UIViewController {
         }
         
         alertWithTF.addTextField { (textField) in
-            textField.placeholder = "Minutes"
+            textField.placeholder = localize(str: "minutes_txt")
             textField.keyboardType = .numberPad
         }
         alertWithTF.addTextField { (textField) in
-            textField.placeholder = "Seconds"
+            textField.placeholder = localize(str: "seconds_txt")
             textField.keyboardType = .numberPad
         }
         alertWithTF.addAction(done)
-        alertWithTF.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        alertWithTF.addAction(UIAlertAction(title: localize(str: "cancel_txt"), style: .destructive, handler: nil))
         
     }
     

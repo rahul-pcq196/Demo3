@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Demo3
+
+  Created by PCQ196 on 05/02/21.
+  
+*/
+
+// play vc
+"ok_txt"  =  "OK";
+"both_even_num_title" = "Both are Even numbers";
+"both_odd_num_title" = "Both are Odd numbers";
+
+// alarm vc
+"cancel_txt" = "Cancel";
+"done_txt" =  "Done";
+"minutes_txt" = "Minutes";
+"seconds_txt"  =  "Seconds";
+"enter_minutes_seconds_title" = "Enter Minutes and Seconds";

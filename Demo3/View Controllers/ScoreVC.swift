@@ -16,7 +16,7 @@ class ScoreVC: UIViewController {
         super.viewDidLoad()
         
         // register tableview cell from nib
-        tblvwScore.register(UINib(nibName: "ScoreTblCell", bundle: .main), forCellReuseIdentifier: "ScoreTblCell")
+        tblvwScore.register(UINib(nibName: K.scoreCellNibName, bundle: .main), forCellReuseIdentifier: K.scoreCellIdentifire)
     }
 
 }
@@ -30,7 +30,7 @@ extension ScoreVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreTblCell", for: indexPath) as! ScoreTblCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.scoreCellIdentifire, for: indexPath) as! ScoreTblCell
         let player = arrPlayers[indexPath.row]
         
         cell.lblIndex.text = "\(indexPath.row + 1)"
@@ -56,7 +56,7 @@ extension ScoreVC: UITableViewDelegate, UITableViewDataSource{
     // on selecting cell of table
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as! ScoreTblCell
-        let vc = Util.getStoryboard().instantiateViewController(withIdentifier: "PlayerDetailVC") as! PlayerDetailVC
+        let vc = Util.getStoryboard().instantiateViewController(withIdentifier: K.playerDetailVCIdentifire) as! PlayerDetailVC
         vc.playerId = selectedCell.playerId
         self.navigationController?.pushViewController(vc, animated: true)
     }

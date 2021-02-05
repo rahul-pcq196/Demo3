@@ -34,7 +34,7 @@ extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayCollCell", for: indexPath) as! PlayCollCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.playCollCellIdentifire, for: indexPath) as! PlayCollCell
         cell.backgroundColor = #colorLiteral(red: 0, green: 0.9914394021, blue: 1, alpha: 1)
         cell.lblNum.text = "\(indexPath.row + 1)"
         return cell
@@ -58,23 +58,23 @@ extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             currentNum = indexPath.row + 1
             if (prevNum % 2 == 0) && (currentNum % 2 == 0) {
             
-                let done = UIAlertAction(title: "OK", style: .default, handler: { (_ action) in
+                let done = UIAlertAction(title: localize(str: "ok_txt"), style: .default, handler: { (_ action) in
                     self.selectedCount = 0
                     self.prevNum = 0
                     self.currentNum = 0
                     self.collvwBoard.reloadData()
                 })
-                Alert.shared.ShowAlert(title: "Both are Even numbers", message: "", in: self, withAction: [done], addCloseAction: false)
+                Alert.shared.ShowAlert(title: localize(str: "both_even_num_title"), message: "", in: self, withAction: [done], addCloseAction: false)
                 
             } else if (prevNum % 2 == 1) && (currentNum % 2 == 1) {
                 
-                let done = UIAlertAction(title: "OK", style: .default, handler: { (_ action) in
+                let done = UIAlertAction(title: localize(str: "ok_txt"), style: .default, handler: { (_ action) in
                     self.selectedCount = 0
                     self.prevNum = 0
                     self.currentNum = 0
                     self.collvwBoard.reloadData()
                 })
-                Alert.shared.ShowAlert(title: "Both are Odd numbers", message: "", in: self, withAction: [done], addCloseAction: false)
+                Alert.shared.ShowAlert(title: localize(str: "both_odd_num_title"), message: "", in: self, withAction: [done], addCloseAction: false)
                 
             } else {
                 
