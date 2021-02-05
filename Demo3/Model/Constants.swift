@@ -13,7 +13,6 @@ struct K {
     static let scoreCellNibName: String = "ScoreTblCell"
     static let scoreCellIdentifire: String = "ScoreTblCell"
     static let playerDetailVCIdentifire: String = "PlayerDetailVC"
-    
     static let playCollCellIdentifire: String = "PlayCollCell"
 }
 
