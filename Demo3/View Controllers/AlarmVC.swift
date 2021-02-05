@@ -10,10 +10,9 @@ import UIKit
 class AlarmVC: UIViewController {
 
     @IBOutlet weak var lblTime: UILabel!
-    @IBOutlet weak var btnStartStop: UIButton!
+    @IBOutlet weak var btnReset: UIButton!
     @IBOutlet weak var btnAdd: UIButton!
-    
-    var isLive = false
+    var alertWithTF = UIAlertController()
     var timer = Timer()
     
     var time = Int()
@@ -23,51 +22,80 @@ class AlarmVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        time = 5
+        time = 0
         updateTimeLbl()
-       
+        configureAlertWithTF()
     }
     
+    // to update(decrease) time
     @objc func updateTime(){
-    
-        time = time - 1
         
-        if time < 0{
+        time = time - 1
+        if time <= 0{
             timer.invalidate()
-            isLive = false
-            btnStartStop.setTitle("START", for: .normal)
             print("Finished")
-        } else {
-            updateTimeLbl()
+            if time < 0{
+                return
+            }
         }
+        updateTimeLbl()
         
     }
+    
+    // to update label of time
     func updateTimeLbl(){
         
         mins = Int(time / 60)
         sec = time % 60
-        
         lblTime.text = "\(String(format: "%02d", mins)) : \(String(format: "%02d", sec))"
     }
     
-
+    // to configure alertview with text fields
+    func configureAlertWithTF(){
+        
+        alertWithTF = UIAlertController(title: "Enter Minutes and Seconds", message: "", preferredStyle: .alert)
+        
+        let done = UIAlertAction(title: "Done", style: .default) { (_ action) in
+            
+            let txtMinutes = self.alertWithTF.textFields![0] as UITextField
+            let txtSeconds = self.alertWithTF.textFields![1] as UITextField
+            
+            let minutes = Int(txtMinutes.text ?? "0") ?? 0
+            let seconds = Int(txtSeconds.text ?? "0") ?? 0
+            
+            self.timer.invalidate()
+            self.time = (minutes * 60) + seconds
+            self.updateTimeLbl()
+            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+            
+        }
+        
+        alertWithTF.addTextField { (textField) in
+            textField.placeholder = "Minutes"
+            textField.keyboardType = .numberPad
+        }
+        alertWithTF.addTextField { (textField) in
+            textField.placeholder = "Seconds"
+            textField.keyboardType = .numberPad
+        }
+        alertWithTF.addAction(done)
+        alertWithTF.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        
+    }
+    
+    // user interaction function with buttons
     @IBAction func userHandle(_ sender: UIButton){
         
-        if sender == btnStartStop{
+        if sender == btnReset{
             
-            if isLive {
-                timer.invalidate()
-                btnStartStop.setTitle("START", for: .normal)
-                isLive = false
-            } else if isLive == false && time > 0 {
-                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-                btnStartStop.setTitle("STOP", for: .normal)
-                isLive = true
-            }
+            timer.invalidate()
+            time = 0
+            self.updateTimeLbl()
             
         } else if sender == btnAdd{
             
-           
+            self.present(alertWithTF, animated: true, completion: nil)
+            
         }
 
     }
