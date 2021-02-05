@@ -9,22 +9,22 @@
 /* Begin PBXBuildFile section */
 		5509393B25CBA88B00677C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509393A25CBA88B00677C27 /* AppDelegate.swift */; };
 		5509393D25CBA88B00677C27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509393C25CBA88B00677C27 /* SceneDelegate.swift */; };
-		5509393F25CBA88B00677C27 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509393E25CBA88B00677C27 /* WelcomeVC.swift */; };
+		5509393F25CBA88B00677C27 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509393E25CBA88B00677C27 /* WelcomeViewController.swift */; };
 		5509394225CBA88B00677C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5509394025CBA88B00677C27 /* Main.storyboard */; };
 		5509394425CBA88F00677C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5509394325CBA88F00677C27 /* Assets.xcassets */; };
 		5509394725CBA88F00677C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5509394525CBA88F00677C27 /* LaunchScreen.storyboard */; };
 		5509395525CBAD9500677C27 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395425CBAD9500677C27 /* Extension.swift */; };
-		5509395825CBAE4300677C27 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395725CBAE4300677C27 /* TabbarVC.swift */; };
+		5509395825CBAE4300677C27 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395725CBAE4300677C27 /* TabbarViewController.swift */; };
 		5509395C25CBAF1200677C27 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395B25CBAF1200677C27 /* Util.swift */; };
-		5509395F25CBBD4B00677C27 /* ScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395E25CBBD4B00677C27 /* ScoreVC.swift */; };
+		5509395F25CBBD4B00677C27 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509395E25CBBD4B00677C27 /* ScoreViewController.swift */; };
 		5509396325CBBE3A00677C27 /* ScoreTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396225CBBE3A00677C27 /* ScoreTblCell.swift */; };
 		5509396625CBBE4800677C27 /* ScoreTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5509396525CBBE4800677C27 /* ScoreTblCell.xib */; };
 		5509396925CBC7E300677C27 /* DataArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396825CBC7E300677C27 /* DataArrays.swift */; };
-		5509396C25CBD27100677C27 /* PlayerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396B25CBD27100677C27 /* PlayerDetailVC.swift */; };
-		5509396F25CC00BF00677C27 /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396E25CC00BF00677C27 /* PlayVC.swift */; };
+		5509396C25CBD27100677C27 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396B25CBD27100677C27 /* PlayerDetailViewController.swift */; };
+		5509396F25CC00BF00677C27 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509396E25CC00BF00677C27 /* PlayViewController.swift */; };
 		5509397225CC02A400677C27 /* PlayCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397125CC02A400677C27 /* PlayCollCell.swift */; };
 		5509397525CC068F00677C27 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397425CC068F00677C27 /* Define.swift */; };
-		5509397825CC182C00677C27 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397725CC182C00677C27 /* AlarmVC.swift */; };
+		5509397825CC182C00677C27 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509397725CC182C00677C27 /* AlarmViewController.swift */; };
 		552988C725CCFF7A0024ED73 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552988C625CCFF7A0024ED73 /* Alert.swift */; };
 		552988CF25CD23680024ED73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 552988D125CD23680024ED73 /* Localizable.strings */; };
 		552988D525CD46280024ED73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552988D425CD46280024ED73 /* Constants.swift */; };
@@ -34,23 +34,23 @@
 		5509393725CBA88B00677C27 /* Demo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5509393A25CBA88B00677C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5509393C25CBA88B00677C27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5509393E25CBA88B00677C27 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		5509393E25CBA88B00677C27 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5509394125CBA88B00677C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5509394325CBA88F00677C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5509394625CBA88F00677C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5509394825CBA88F00677C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5509395425CBAD9500677C27 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		5509395725CBAE4300677C27 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		5509395725CBAE4300677C27 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		5509395B25CBAF1200677C27 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		5509395E25CBBD4B00677C27 /* ScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreVC.swift; sourceTree = "<group>"; };
+		5509395E25CBBD4B00677C27 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		5509396225CBBE3A00677C27 /* ScoreTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTblCell.swift; sourceTree = "<group>"; };
 		5509396525CBBE4800677C27 /* ScoreTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreTblCell.xib; sourceTree = "<group>"; };
 		5509396825CBC7E300677C27 /* DataArrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataArrays.swift; sourceTree = "<group>"; };
-		5509396B25CBD27100677C27 /* PlayerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailVC.swift; sourceTree = "<group>"; };
-		5509396E25CC00BF00677C27 /* PlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
+		5509396B25CBD27100677C27 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
+		5509396E25CC00BF00677C27 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		5509397125CC02A400677C27 /* PlayCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCollCell.swift; sourceTree = "<group>"; };
 		5509397425CC068F00677C27 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
-		5509397725CC182C00677C27 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
+		5509397725CC182C00677C27 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		552988C625CCFF7A0024ED73 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		552988D025CD23680024ED73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		552988D425CD46280024ED73 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -103,12 +103,12 @@
 		5509395025CBA93800677C27 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5509393E25CBA88B00677C27 /* WelcomeVC.swift */,
-				5509395725CBAE4300677C27 /* TabbarVC.swift */,
-				5509395E25CBBD4B00677C27 /* ScoreVC.swift */,
-				5509396B25CBD27100677C27 /* PlayerDetailVC.swift */,
-				5509396E25CC00BF00677C27 /* PlayVC.swift */,
-				5509397725CC182C00677C27 /* AlarmVC.swift */,
+				5509393E25CBA88B00677C27 /* WelcomeViewController.swift */,
+				5509395725CBAE4300677C27 /* TabbarViewController.swift */,
+				5509395E25CBBD4B00677C27 /* ScoreViewController.swift */,
+				5509396B25CBD27100677C27 /* PlayerDetailViewController.swift */,
+				5509396E25CC00BF00677C27 /* PlayViewController.swift */,
+				5509397725CC182C00677C27 /* AlarmViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -232,22 +232,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5509397825CC182C00677C27 /* AlarmVC.swift in Sources */,
-				5509396F25CC00BF00677C27 /* PlayVC.swift in Sources */,
+				5509397825CC182C00677C27 /* AlarmViewController.swift in Sources */,
+				5509396F25CC00BF00677C27 /* PlayViewController.swift in Sources */,
 				5509397225CC02A400677C27 /* PlayCollCell.swift in Sources */,
 				552988C725CCFF7A0024ED73 /* Alert.swift in Sources */,
-				5509393F25CBA88B00677C27 /* WelcomeVC.swift in Sources */,
+				5509393F25CBA88B00677C27 /* WelcomeViewController.swift in Sources */,
 				5509395C25CBAF1200677C27 /* Util.swift in Sources */,
-				5509395F25CBBD4B00677C27 /* ScoreVC.swift in Sources */,
+				5509395F25CBBD4B00677C27 /* ScoreViewController.swift in Sources */,
 				552988D525CD46280024ED73 /* Constants.swift in Sources */,
 				5509396325CBBE3A00677C27 /* ScoreTblCell.swift in Sources */,
 				5509393B25CBA88B00677C27 /* AppDelegate.swift in Sources */,
 				5509393D25CBA88B00677C27 /* SceneDelegate.swift in Sources */,
-				5509396C25CBD27100677C27 /* PlayerDetailVC.swift in Sources */,
+				5509396C25CBD27100677C27 /* PlayerDetailViewController.swift in Sources */,
 				5509396925CBC7E300677C27 /* DataArrays.swift in Sources */,
 				5509397525CC068F00677C27 /* Define.swift in Sources */,
 				5509395525CBAD9500677C27 /* Extension.swift in Sources */,
-				5509395825CBAE4300677C27 /* TabbarVC.swift in Sources */,
+				5509395825CBAE4300677C27 /* TabbarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

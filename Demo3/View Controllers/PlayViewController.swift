@@ -7,17 +7,19 @@
 
 import UIKit
 
-class PlayVC: UIViewController {
+class PlayViewController: UIViewController {
     
     @IBOutlet weak var vwHeader: UIView!
     @IBOutlet weak var collvwBoard: UICollectionView!
     
-    var prevNum = Int()
-    var currentNum = Int()
-    var selectedCount = Int()
+    var prevNum : Int?
+    var currentNum : Int?
+    var selectedCount : Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        selectedCount = 0
         
         // set collectionview frame
         collvwBoard.frame = CGRect(x: 10, y: 150, width: screenWidth - 20, height: screenWidth - 20)
@@ -26,7 +28,7 @@ class PlayVC: UIViewController {
 }
 
 // MARK: Collectionview configurations
-extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 49
@@ -56,7 +58,7 @@ extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         if selectedCount == 1{
             
             currentNum = indexPath.row + 1
-            if (prevNum % 2 == 0) && (currentNum % 2 == 0) {
+            if (prevNum! % 2 == 0) && (currentNum! % 2 == 0) {
             
                 let done = UIAlertAction(title: localize(str: "ok_txt"), style: .default, handler: { (_ action) in
                     self.selectedCount = 0
@@ -66,7 +68,7 @@ extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                 })
                 Alert.shared.ShowAlert(title: localize(str: "both_even_num_title"), message: "", in: self, withAction: [done], addCloseAction: false)
                 
-            } else if (prevNum % 2 == 1) && (currentNum % 2 == 1) {
+            } else if (prevNum! % 2 == 1) && (currentNum! % 2 == 1) {
                 
                 let done = UIAlertAction(title: localize(str: "ok_txt"), style: .default, handler: { (_ action) in
                     self.selectedCount = 0
@@ -92,7 +94,7 @@ extension PlayVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         } else if selectedCount == 0 {
             
             prevNum = indexPath.row + 1
-            selectedCount += 1
+            selectedCount! += 1
             
         }
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScoreVC: UIViewController {
+class ScoreViewController: UIViewController {
     
     @IBOutlet weak var vwHeader: UIView!
     @IBOutlet weak var tblvwScore: UITableView!
@@ -22,7 +22,7 @@ class ScoreVC: UIViewController {
 }
 
 // MARK: score tableview configurations
-extension ScoreVC: UITableViewDelegate, UITableViewDataSource{
+extension ScoreViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrPlayers.count
@@ -56,7 +56,7 @@ extension ScoreVC: UITableViewDelegate, UITableViewDataSource{
     // on selecting cell of table
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as! ScoreTblCell
-        let vc = Util.getStoryboard().instantiateViewController(withIdentifier: K.playerDetailVCIdentifire) as! PlayerDetailVC
+        let vc = Util.getStoryboard().instantiateViewController(withIdentifier: K.playerDetailVCIdentifire) as! PlayerDetailViewController
         vc.playerId = selectedCell.playerId
         self.navigationController?.pushViewController(vc, animated: true)
     }

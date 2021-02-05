@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlayerDetailVC: UIViewController {
+class PlayerDetailViewController: UIViewController {
 
     @IBOutlet weak var vwHeader: UIView!
     @IBOutlet weak var btnBack: UIButton!
@@ -18,13 +18,13 @@ class PlayerDetailVC: UIViewController {
     @IBOutlet weak var lblCountry : UILabel!
     @IBOutlet weak var txtvwAbout : UITextView!
     
-    var playerId: Int = Int()
+    var playerId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // fatch and set detail of player
-        let filteredArray = arrPlayers.filter { $0["id"] as! Int == playerId }
+        let filteredArray = arrPlayers.filter { $0["id"] as? Int == playerId }
         if filteredArray.count > 0{
             let player = filteredArray[0]
             

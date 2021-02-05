@@ -14,7 +14,7 @@ class ScoreTblCell: UITableViewCell {
     @IBOutlet weak var lblScore :UILabel!
     @IBOutlet weak var imgvwPlayerImg :UIImageView!
     
-    var playerId: Int = Int()
+    var playerId: Int? = Int()
     
     override func awakeFromNib() {
         super.awakeFromNib()

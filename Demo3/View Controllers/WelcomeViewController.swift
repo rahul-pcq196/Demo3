@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeVC: UIViewController {
+class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var btnStart: UIButton!
 
@@ -20,7 +20,7 @@ class WelcomeVC: UIViewController {
         
         if sender == btnStart{
             
-            let vc = Util.getStoryboard().instantiateViewController(withIdentifier: K.tabbarIdentifier) as! TabbarVC
+            let vc = Util.getStoryboard().instantiateViewController(withIdentifier: K.tabbarIdentifier) as! TabbarViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
