@@ -1,2 +1,2 @@
 # Demo3
-Demo about score, play and Alarm.
+Demo about score(Table view), play(collectionView) and Alarm(Timer).
